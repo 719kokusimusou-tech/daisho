@@ -19,7 +19,7 @@ function render(){
             <td>${item.stock}</td>
             <td>
                 <button onclick="changeStock('${item.id}',1)">+</button>
-                <button onclick="changeStock('${item.id}',-1)">+</button>
+                <button onclick="changeStock('${item.id}',-1)">-</button>
             </td>
         `;
         tbody.appendChild(tr);

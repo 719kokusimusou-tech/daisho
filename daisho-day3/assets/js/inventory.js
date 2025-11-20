@@ -28,7 +28,11 @@ function render(){
         `;
         tbody.appendChild(tr);
     });
-    
+    items.forEach(item=>{
+        const h4=document.createElement("h4");
+        sum=item.price*item.stock+sum;
+        sum.appendChild(h4);
+    });
 }
 function changezyoukyou(id){
     const item=items.find(i=>i.id===id);

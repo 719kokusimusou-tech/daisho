@@ -43,9 +43,16 @@
      action="https://api.staticforms.dev/submit"
      method="POST"
      style="display:none"
-    ></form>
-    <!--<h3>在庫の合計金額</h3>
-    <h4 id="item-sum"></h4>-->
+    >
+    <input type="hidden" name="apikey" value="sf_1caibim2n5flmnl711hc7ke1"/>
+    <input type="hidden" name="subject" value="文化祭　在庫一覧レポート"/>
+    <input
+     type="hidden"
+     name="redirectTo"
+     value="https://719kokusimusou-tech.github.io/daisho/daisho-day4/"
+     />
+     <textarea id="inventory-message" name="message"></textarea>
+    </form>
     </main>
     <script src="assets/js/inventory.js"></script>
 </body>

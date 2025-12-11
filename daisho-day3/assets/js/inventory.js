@@ -6,10 +6,10 @@ const items=[
     
 ];
 const tbody=document.getElementById("item-list");
-const sum=document.getElementById("item-sum")
+//const sum=document.getElementById("item-sum")
 function render(){
     tbody.innerHTML="";
-    sum.innerHTML=""
+    //sum.innerHTML=""
     items.forEach(item=>{
         const tr=document.createElement("tr");
         if(item.stock<item.minStock){
@@ -24,32 +24,31 @@ function render(){
                 <button onclick="changeStock('${item.id}',1)">+</button>
                 <button onclick="changeStock('${item.id}',-1)">-</button>
             </td>
-            <td>changezyoukyou('${item.id}')</td>
         `;
         tbody.appendChild(tr);
     });
-    items.forEach(item=>{
-        const h4=document.createElement("h4");
-        sum=item.price*item.stock+sum;
-        sum.appendChild(h4);
-    });
+    //items.forEach(item=>{
+    //    const h4=document.createElement("h4");
+    //    sum=item.price*item.stock+sum;
+   //     sum.appendChild(h4);
+   // });
 }
-function changezyoukyou(id){
-    const item=items.find(i=>i.id===id);
-    if(!item){
-        return;
-    }
-    if(item.stock<=item.stock*2){
-        item.zyoukyou="在庫たっぷり"
-    }
-    if(item.stock<item.stock*2){
-        item.zyoukyou="在庫少なめ"
-    }
-    if(item.stock<=0){
-        item.zyoukyou="売り切れ"
-    }
-    render();
-}
+//function changezyoukyou(id){
+//    const item=items.find(i=>i.id===id);
+//    if(!item){
+//        return;
+//    }
+//    if(item.stock<=item.stock*2){
+//        item.zyoukyou="在庫たっぷり"
+//    }
+ //   if(item.stock<item.stock*2){
+ //       item.zyoukyou="在庫少なめ"
+ //   }
+ //   if(item.stock<=0){
+ //       item.zyoukyou="売り切れ"
+  //  }
+ //   render();
+//}
 function changeStock(id,diff){
     const item=items.find(i=>i.id===id);
     if(!item){

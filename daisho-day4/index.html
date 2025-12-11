@@ -34,6 +34,16 @@
         在庫数が<code>minStock</code>より少ない商品は行の背景が変わります
     </p>
     </section>
+    <section class="actions">
+        <button id="save-btn" class="btn">在庫を保存する</button>
+        <button id="mail-btn" class="btn btn-ghost">在庫一覧をメールで送る</button>
+    </section>
+    <form
+     id="inventory-mail-form"
+     action="https://api.staticforms.dev/submit"
+     method="POST"
+     style="display:none"
+    ></form>
     <!--<h3>在庫の合計金額</h3>
     <h4 id="item-sum"></h4>-->
     </main>
